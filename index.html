@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Recomendador de películas según tu edad y género favorito">
+
+    <title>CineMágico | Mario Daniel Jacinto Arista</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+
+    <header class="encabezado">
+
+        <div class="logo">🎬 CineMágico</div>
+
+        <h1>¡Bienvenido al cine!</h1>
+
+        <p>Recomendador de películas de Mario Daniel Jacinto Arista</p>
+
+        <span>Encuentra tu próxima película favorita 🍿</span>
+
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <main class="contenedor">
+
+        <section class="presentacion">
+
+            <h2>🍿 Encuentra tu película ideal</h2>
+
+            <p>
+                Descubre películas que se adapten a tus gustos.
+                Ingresa tu edad, selecciona tu categoría y elige
+                el género que más te guste.
+                ¡Nosotros encontramos una recomendación para ti!
+            </p>
+
+        </section>
+
+        <!-- FORMULARIO -->
+
+        <section class="formulario">
+
+            <h3>1. Ingresa tu edad</h3>
+
+            <label for="edad">¿Cuántos años tienes?</label>
+
+            <input
+                type="number"
+                id="edad"
+                placeholder="Ejemplo: 20"
+                min="2"
+                max="120"
+            >
+
+            <h3>2. Selecciona tu categoría</h3>
+
+            <div class="opciones edades">
+
+                <button class="boton-opcion edad" data-categoria="infantil">
+                    🧸
+                    <br>
+                    2 a 12 años
+                </button>
+
+                <button class="boton-opcion edad" data-categoria="juvenil">
+                    🎮
+                    <br>
+                    13 a 17 años
+                </button>
+
+                <button class="boton-opcion edad" data-categoria="adulto">
+                    🎥
+                    <br>
+                    18 años o más
+                </button>
+
+            </div>
+
+            <h3>3. ¿Qué género de película prefieres?</h3>
+
+            <div class="opciones generos">
+
+                <button class="boton-opcion genero" data-genero="Animación">
+                    🧸 Animación
+                </button>
+
+                <button class="boton-opcion genero" data-genero="Comedia">
+                    😂 Comedia
+                </button>
+
+                <button class="boton-opcion genero" data-genero="Aventura">
+                    🌎 Aventura
+                </button>
+
+                <button class="boton-opcion genero" data-genero="Fantasía">
+                    🪄 Fantasía
+                </button>
+
+                <button class="boton-opcion genero" data-genero="Acción">
+                    ⚡ Acción
+                </button>
+
+                <button class="boton-opcion genero" data-genero="Drama">
+                    🎭 Drama
+                </button>
+
+                <button class="boton-opcion genero" data-genero="Ciencia ficción">
+                    🚀 Ciencia ficción
+                </button>
+
+                <button class="boton-opcion genero" data-genero="Crimen">
+                    🕵️ Crimen
+                </button>
+
+                <button class="boton-opcion genero" data-genero="Musical">
+                    🎵 Musical
+                </button>
+
+            </div>
+
+            <button id="btnRecomendar" class="boton-principal">
+                🎬 Recomendarme una película
+            </button>
+
+        </section>
+
+        <!-- RESULTADO -->
+
+        <section id="resultado" class="resultado oculto">
+
+            <div class="icono-resultado">⭐</div>
+
+            <h2>¡Nuestra recomendación para ti!</h2>
+
+            <h3 id="tituloPelicula"></h3>
+
+            <p id="descripcionPelicula"></p>
+
+            <div class="informacion">
+
+                <span id="categoriaPelicula"></span>
+
+                <span id="generoPelicula"></span>
+
+            </div>
+
+            <p id="edadPelicula" class="edad-info"></p>
+
+            <!-- ENLACES -->
+
+            <div class="enlaces-pelicula">
+
+                <a
+                    id="linkTrailer"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    ▶ Ver tráiler
+                </a>
+
+                <a
+                    id="linkPelicula"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    🍿 Dónde ver
+                </a>
+
+            </div>
+
+            <p class="nota-enlaces">
+                Consulta los tráileres y la disponibilidad de las
+                películas en plataformas externas.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        <p>© 2026 CineMágico</p>
+
+        <p>Desarrollado por Mario Daniel Jacinto Arista</p>
+
+        <p>Proyecto desarrollado con HTML, CSS y JavaScript</p>
+
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
